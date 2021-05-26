@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100%;
+    /* min-height: 95%; */
+    display: flex;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.desctop-header {
+    display: none;
+}
+
+.brand {
+    width: 120px;
+    margin:  24px;
+}
+
+.left {
+    height: 100%;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    text-align: center;
+    padding: 24px;
+}
+
+.title {
+    font-size: 44px;
+    letter-spacing: 10px;
+    color: hsl(0, 6%, 24%);
+}
+
+.we-are {
+    font-weight: 300;
+    color:  hsl(0, 36%, 70%);
+}
+
+.description {
+    color:  hsl(0, 36%, 70%);
+    line-height: 1.5;
+}
+
+.email-form {
+    margin-top: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid hsl(0, 16%, 80%);
+    border-radius: 999px;
+}
+
+.email-field {
+    flex: 2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    padding: 18px 0 18px 24px;
+    outline: none;
+}
+
+.email-field::placeholder {
+    color:  hsl(0, 16%, 80%);
+}
+
+.next-btn {
+    flex: 0.5 1 1;
+    width: 70px;
+    margin-left: -50px;
+    border-radius: 999px;
+    border: none;
+    background-color: tomato;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px rgba(32, 32, 32, 0.2);
+}
+
+.next-btn:hover {
+    width: 90px;
+    background-image: linear-gradient(135deg, #FADADB, #F7C7C7);
+    box-shadow: 0 0 6px rgba(32, 32, 32, 0.4);
+}
+
+.fa-angle-right {
+    color: #fff;
+    font-size: 32px !important;
+}
+
+.bi-exclamation-circle-fill {
+    opacity: 0;
+    flex: 1 0 auto;
+    margin-top: 14px;
+    margin-right: 54px;
+    color: rgba(255, 0, 0, 0.548);
+    transition: all 0.3s ease;
+}
+
+.error {
+    margin-top: 14px;
+    margin-left: 24px;
+    text-align: start;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgba(255, 0, 0, 0.548);
+    transition: all 0.3s ease;
+}
+
+.img-elem {
+    width: 100%;
+}
+
+@media (min-width: 1440px) {
+    .content {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .right {
+        flex: 1.3;
+    }
+
+    .left {
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex: 2;
+        text-align: start;
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 24%;
+        margin-top: -34px;
+        height: 100%;
+    }
+
+    .img-elem {
+        width: 100%;
+        height: 100%;
+    }
+
+    .desctop-header {
+        text-align: start;
+    }
+
+    .brand {
+        width: 174px;
+        margin: 0;
+        margin-bottom: 100px;
+    }
+
+    .title {
+        font-size: 74px;
+        margin-bottom: 24px;
+    }
+}
